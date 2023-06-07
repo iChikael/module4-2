@@ -23,6 +23,7 @@ $('#btSave').on('click', function () {
         id
     }
     currentId++;
+
     $.ajax({
         url: 'http://localhost:3300/customers',
         type: 'POST',
@@ -31,7 +32,10 @@ $('#btSave').on('click', function () {
         success: function (response) {
             let str = renderCustomer(customer);
             $('#tbCustomer tbody').prepend(str);
-
+            $('#fullNameCre').val('');
+            $('#emailCre').val('');
+            $('#phoneCre').val('');
+            $('#addressCre').val('');
             $('#mdCreate').modal('hide');
             Swal.fire({
                 position: 'top-end',

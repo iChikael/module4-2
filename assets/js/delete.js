@@ -1,4 +1,4 @@
-$('#mdAction').on('click', 'button.delete', function (){
+$('#mdAction').on('click', 'button.delete', function () {
     $('#mdAction').modal('hide');
     let customerId = $(this).data('id');
     getCustomerById(currentCustomerId).then((data) => {

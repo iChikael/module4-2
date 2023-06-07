@@ -27,13 +27,13 @@ $('#btnUpdate').on('click', () => {
         let str = renderCustomer(data);
         console.log(currentCustomerId)
         $('#tr_' + currentCustomerId).replaceWith(str);
-        
+
         $('#mdUpdate').modal('hide');
     })
         .catch((error) => {
             console.log(error);
         })
-        getAllCustomers();
+    getAllCustomers();
 })
 
 
